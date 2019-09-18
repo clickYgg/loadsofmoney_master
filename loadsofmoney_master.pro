@@ -36,3 +36,9 @@ HEADERS += \
 FORMS += \
         mainwindow.ui \
         questionview.ui
+
+
+RESOURCES += \
+    resources.qrc
+
+DISTFILES +=
