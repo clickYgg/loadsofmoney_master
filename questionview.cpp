@@ -10,7 +10,7 @@ QuestionView::QuestionView(QWidget *parent) :
   ui(new Ui::QuestionView)
 {
   ui->setupUi(this);
-  setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+
 }
 
 
