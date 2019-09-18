@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>QuestionView</class>
+ <widget class="QWidget" name="QuestionView">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1002</width>
-    <height>524</height>
+    <width>737</width>
+    <height>188</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -17,19 +23,25 @@
    </sizepolicy>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string/>
   </property>
   <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
     <rect>
      <x>22</x>
      <y>19</y>
-     <width>961</width>
-     <height>481</height>
+     <width>691</width>
+     <height>151</height>
     </rect>
    </property>
-   <layout class="QVBoxLayout">
+   <layout class="QVBoxLayout" name="test">
     <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="sizeConstraint">
+     <enum>QLayout::SetMaximumSize</enum>
+    </property>
+    <property name="rightMargin">
      <number>0</number>
     </property>
     <item>
@@ -71,7 +83,7 @@
      </spacer>
     </item>
     <item>
-     <layout class="QGridLayout" name="gridLayout" columnstretch="0">
+     <layout class="QGridLayout" name="gridLayout" columnstretch="0,0">
       <property name="leftMargin">
        <number>4</number>
       </property>
@@ -98,7 +110,7 @@
         </property>
        </widget>
       </item>
-      <item row="2" column="0">
+      <item row="0" column="1">
        <widget class="QPushButton" name="pushButton_3">
         <property name="text">
          <string>PushButton</string>
@@ -111,7 +123,7 @@
         </property>
        </widget>
       </item>
-      <item row="3" column="0">
+      <item row="1" column="1">
        <widget class="QPushButton" name="pushButton_4">
         <property name="text">
          <string>PushButton</string>

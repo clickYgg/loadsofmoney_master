@@ -4,20 +4,19 @@
 #include <QWidget>
 #include <string>
 
+using namespace std;
+
 namespace Ui {
     class QuestionView;
 }
 
-class QuestionView : public QWidget
-{
+class QuestionView : public QWidget {
     Q_OBJECT
 public:
-    explicit QuestionView(QWidget *parent = nullptr, string question,string answer1,string answer2,string answer3,string answer4);
-     ~QuestionView();
-
+    QuestionView(QWidget *parent = 0);
+    ~QuestionView();
 private:
     Ui::QuestionView *ui;
-
 signals:
 
 public slots:

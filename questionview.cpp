@@ -1,14 +1,22 @@
 #include "questionview.h"
-#include <string>
+#include "ui_questionview.h"
 
+#include <string.h>
 
-QuestionView::QuestionView(QWidget *parent, string question,string answer1,string answer2,string answer3,string answer4) : QWidget(parent),
+using namespace std;
+
+QuestionView::QuestionView(QWidget *parent) :
+  QWidget(parent),
   ui(new Ui::QuestionView)
 {
   ui->setupUi(this);
+  setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
 }
 
-MainWindow::~MainWindow()
-{
+
+
+
+
+QuestionView::~QuestionView() {
   delete ui;
 }
