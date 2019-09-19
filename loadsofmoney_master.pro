@@ -26,12 +26,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-        questionview.cpp
+        questionview.cpp \
+    question.cpp
+
 
 HEADERS += \
         mainwindow.h \
-        questionview.h
-
+        questionview.h \
+        question.h
 
 FORMS += \
         mainwindow.ui \

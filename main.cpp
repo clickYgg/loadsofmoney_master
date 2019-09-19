@@ -81,7 +81,7 @@ int main(int argc, char *argv[])
     MainWindow w;
     w.show();
 
-    gameLoop(0);
+//gameLoop(0);
 
     return a.exec();
 }

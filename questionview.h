@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <string>
+#include <question.h>
 
 using namespace std;
 
@@ -11,16 +12,17 @@ namespace Ui {
 }
 
 class QuestionView : public QWidget {
-    Q_OBJECT
+
 public:
     QuestionView(QWidget *parent = 0);
-    void setQuestion();
+    void setQuestion(Question question);
     ~QuestionView();
 private:
+    Question question;
     Ui::QuestionView *ui;
+    void answersClicked(int i);
 signals:
-
-public slots:
+    void success(bool status);
 
 
 };
