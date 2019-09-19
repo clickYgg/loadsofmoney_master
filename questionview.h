@@ -14,6 +14,7 @@ class QuestionView : public QWidget {
     Q_OBJECT
 public:
     QuestionView(QWidget *parent = 0);
+    void setQuestion();
     ~QuestionView();
 private:
     Ui::QuestionView *ui;

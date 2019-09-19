@@ -13,8 +13,9 @@ QuestionView::QuestionView(QWidget *parent) :
 
 }
 
+void setQuestion() {
 
-
+}
 
 
 QuestionView::~QuestionView() {

@@ -109,6 +109,12 @@
       </item>
       <item row="1" column="0">
        <widget class="QPushButton" name="pushButton_2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="text">
          <string>PushButton</string>
         </property>
@@ -129,9 +135,14 @@
       </item>
       <item row="1" column="1">
        <widget class="QPushButton" name="pushButton_4">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(0, 85, 255)
-</string>
+         <string notr="true"/>
         </property>
         <property name="text">
          <string>PushButton</string>
