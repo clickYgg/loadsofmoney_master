@@ -12,18 +12,21 @@ namespace Ui {
 }
 
 class QuestionView : public QWidget {
-
+    Q_OBJECT
 public:
     QuestionView(QWidget *parent = 0);
-    void setQuestion(Question question);
+    void setQuestion(Question *question);
     ~QuestionView();
 private:
-    Question question;
+    int goodOne = 0;
     Ui::QuestionView *ui;
-    void answersClicked(int i);
 signals:
     void success(bool status);
-
+private slots:
+    void buttonClicked1();
+    void buttonClicked2();
+    void buttonClicked3();
+    void buttonClicked4();
 
 };
 

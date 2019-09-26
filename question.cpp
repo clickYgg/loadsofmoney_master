@@ -1,10 +1,11 @@
 #include "question.h"
 
 #include <string.h>
-
+#include <QStringList>
+#include <QString>
 using namespace std;
 
-Question::Question(string question,string answer1,string answer2, string answer3,string answer4,int solution, int difficulty) {
+Question::Question(QString question,QString answer1,QString answer2, QString answer3,QString answer4,int solution, int difficulty) {
     answers->push_back(answer1);
     answers->push_back(answer2);
     answers->push_back(answer3);
@@ -14,12 +15,12 @@ Question::Question(string question,string answer1,string answer2, string answer3
     this->solution = solution;
 }
 
-string Question::getAnswer(int i) {
+QString Question::getAnswer(int i) {
    return answers->at(i);
 }
 
-string Question::getQuestion() {
-    return question.c_str();
+QString Question::getQuestion() {
+    return question;
 }
 
 int Question::getSolution() {
@@ -27,5 +28,5 @@ int Question::getSolution() {
 }
 
 Question::~Question() {
-
+    answers->clear();
 }

@@ -20,7 +20,7 @@
    </sizepolicy>
   </property>
   <property name="windowTitle">
-   <string>Wer wird Millioner?</string>
+   <string>Wer wird Millionär?</string>
   </property>
   <property name="windowIcon">
    <iconset resource="resources.qrc">
