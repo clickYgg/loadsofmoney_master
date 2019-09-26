@@ -2,9 +2,11 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <question.h>
+#include <questionview.h>
 
 namespace Ui {
-class MainWindow;
+    class MainWindow;
 }
 
 class MainWindow : public QMainWindow
@@ -13,7 +15,9 @@ class MainWindow : public QMainWindow
 
 public:
     explicit MainWindow(QWidget *parent = 0);
+    QuestionView* getQuestionView();
     ~MainWindow();
+
 
 private:
     Ui::MainWindow *ui;

@@ -72,10 +72,24 @@ int gameloop(int round) {
     }
 }
 
+
+#include <string>
+
+using namespace std;
+
+
+
+#include <string>
+
+using namespace std;
+
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     MainWindow w;
+
+
     w.show();
 
     gameloop(0);
