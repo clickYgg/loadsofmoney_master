@@ -5,6 +5,7 @@
 #include <string>
 #include <question.h>
 
+
 using namespace std;
 
 namespace Ui {
@@ -27,7 +28,6 @@ private slots:
     void buttonClicked2();
     void buttonClicked3();
     void buttonClicked4();
-
 };
 
 #endif // QUESTIONVIEW_H

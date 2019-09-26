@@ -39,6 +39,15 @@ FORMS += \
         mainwindow.ui \
         questionview.ui
 
+HEADERS += \
+        mainwindow.h \
+        questionview.h \
+    question.h
+
+FORMS += \
+        mainwindow.ui \
+    questionview.ui
+
 
 RESOURCES += \
     resources.qrc

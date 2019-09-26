@@ -3,6 +3,7 @@
 #include <string.h>
 #include <iostream>
 
+
 using namespace std;
 
 QuestionView::QuestionView(QWidget *parent) :
@@ -59,7 +60,6 @@ void QuestionView::setQuestion(Question *question) {
     goodOne = question->getSolution()+1;
 
 }
-
 
 
 QuestionView::~QuestionView() {
