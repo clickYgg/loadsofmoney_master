@@ -20,11 +20,7 @@
    </sizepolicy>
   </property>
   <property name="windowTitle">
-<<<<<<< HEAD
    <string>Wer wird Millionär?</string>
-=======
-   <string>Wer wird Millioner?</string>
->>>>>>> c67ae40bccc056af7a2fb6e3a2bffacac4d7525b
   </property>
   <property name="windowIcon">
    <iconset resource="resources.qrc">

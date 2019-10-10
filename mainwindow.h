@@ -18,7 +18,6 @@ public:
     QuestionView* getQuestionView();
     ~MainWindow();
 
-
 private:
     Ui::MainWindow *ui;
 };
