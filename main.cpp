@@ -2,6 +2,7 @@
 #include <QApplication>
 #include <string>
 #include <iostream>
+#include <database.h>
 
 
 using namespace std;
@@ -75,10 +76,16 @@ int gameloop(int round) {
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+    Database *db = new Database();
+    *db->getQuestion(0);
+
+    /*
+
+    QApplication a(argc, argv);
     MainWindow w;
     w.show();
 
     gameloop(0);
-
+    */
     return a.exec();
 }
