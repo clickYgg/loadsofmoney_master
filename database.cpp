@@ -15,7 +15,7 @@ QString* question;
 
 QString get_Question = "SELECT Frage FROM questions WHERE Q_ID=";
 QString get_Answer = QString("SELECT ANSWER_%q  FROM questions WHERE Q_ID=").arg(answernr);
-QString get_Loesung = "SELECT Lösung FROM questions WHERE Q_ID=";
+QString get_Loesung = "SELECT LÃ¶sung FROM questions WHERE Q_ID=";
 
 QString* Database::getQuestion(int id)
 {
@@ -44,4 +44,3 @@ Database::Database()
     db.setPassword("");
     db.open();
 }
-
