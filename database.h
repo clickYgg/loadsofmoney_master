@@ -1,3 +1,4 @@
+
 #ifndef DATABASE_H
 #define DATABASE_H
 #include <QtSql/QSqlDatabase>
@@ -11,3 +12,4 @@ public:
 };
 
 #endif // DATABASE_H
+
