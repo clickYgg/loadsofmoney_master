@@ -12,7 +12,7 @@ QuestionView::QuestionView(QWidget *parent) :
   ui->setupUi(this);
   cout << "test";
   connect(ui->pushButton, SIGNAL (released()),this, SLOT (buttonClicked1()));
-  connect(ui->pushButton_2, SIGNAL (released()),this, SLOT (buttonClicked2();));
+  connect(ui->pushButton_2, SIGNAL (released()),this, SLOT (buttonClicked2()));
   connect(ui->pushButton_3, SIGNAL (released()),this, SLOT (buttonClicked3()));
   connect(ui->pushButton_4, SIGNAL (released()),this, SLOT (buttonClicked4()));
 

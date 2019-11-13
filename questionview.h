@@ -23,7 +23,7 @@ private:
     Ui::QuestionView *ui;
 signals:
     void success(bool status);
-private slots:
+public slots:
     void buttonClicked1();
     void buttonClicked2();
     void buttonClicked3();
