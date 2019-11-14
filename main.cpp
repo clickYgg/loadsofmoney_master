@@ -17,7 +17,9 @@ int main(int argc, char *argv[])
 
     GameLoop *g = new GameLoop(&mainWindow);
     QObject::connect(mainWindow.getStartButton(), SIGNAL (released()), g, SLOT (startButtonPress()));
-    QObject::connect(mainWindow.getQuestionView(), SIGNAL (success(bool)), g, SLOT (success(bool)));
+
+    QObject::connect(mainWindow.getQuestionView(), &QuestionView::success, g, &GameLoop::success);
+
     g->init();
     return a.exec();
 }

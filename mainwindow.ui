@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>882</width>
-    <height>489</height>
+    <width>903</width>
+    <height>634</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -26,6 +26,45 @@
    <iconset resource="resources.qrc">
     <normaloff>:/images/icon.png</normaloff>:/images/icon.png</iconset>
   </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QLabel {
+       anchors.centerIn: parent
+       text: &quot;Top or left&quot;
+       color: &quot;white&quot;
+	   anchors.fill: parent
+       anchors.margins: 20
+}
+
+QButton {
+       anchors.centerIn: parent
+       text: &quot;Top or left&quot;
+       color: &quot;white&quot;
+	   anchors.fill: parent
+       anchors.margins: 20
+}
+
+QuestionView {
+       anchors.centerIn: parent
+       text: &quot;Top or left&quot;
+       color: &quot;white&quot;
+	   anchors.fill: parent
+       anchors.margins: 20
+}
+
+QWidget#centralWidget {
+    background-image: url(:/images/icon.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: blue;
+}
+
+QWidget {
+	position: center;
+}</string>
+  </property>
   <property name="toolButtonStyle">
    <enum>Qt::ToolButtonTextOnly</enum>
   </property>
@@ -33,8 +72,22 @@
    <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralWidget">
+   <property name="maximumSize">
+    <size>
+     <width>903</width>
+     <height>16777215</height>
+    </size>
+   </property>
    <property name="contextMenuPolicy">
     <enum>Qt::NoContextMenu</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QMainWindow {
+    background-image: url(:/images/icon.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: blue;
+}</string>
    </property>
    <widget class="QuestionView" name="questionView" native="true">
     <property name="enabled">
@@ -43,7 +96,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>320</y>
+      <y>420</y>
       <width>841</width>
       <height>121</height>
      </rect>
@@ -64,8 +117,8 @@
    <widget class="QPushButton" name="startButton">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>170</y>
+      <x>390</x>
+      <y>330</y>
       <width>101</width>
       <height>41</height>
      </rect>
@@ -77,9 +130,9 @@
    <widget class="QLabel" name="endMsg">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>100</y>
-      <width>261</width>
+      <x>310</x>
+      <y>200</y>
+      <width>251</width>
       <height>41</height>
      </rect>
     </property>
@@ -96,7 +149,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>882</width>
+     <width>903</width>
      <height>21</height>
     </rect>
    </property>

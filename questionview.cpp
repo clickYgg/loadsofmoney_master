@@ -10,7 +10,7 @@ QuestionView::QuestionView(QWidget *parent) :
   QWidget(parent),
   ui(new Ui::QuestionView) {
   ui->setupUi(this);
-  cout << "test";
+
   connect(ui->pushButton, SIGNAL (released()),this, SLOT (buttonClicked1()));
   connect(ui->pushButton_2, SIGNAL (released()),this, SLOT (buttonClicked2()));
   connect(ui->pushButton_3, SIGNAL (released()),this, SLOT (buttonClicked3()));
@@ -57,8 +57,7 @@ void QuestionView::setQuestion(Question *question) {
     ui->pushButton_3->setText(question->getAnswer(2));
     ui->pushButton_4->setText(question->getAnswer(3));
 
-    goodOne = question->getSolution()+1;
-
+    goodOne = question->getSolution();
 }
 
 

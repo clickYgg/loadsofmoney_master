@@ -3,6 +3,7 @@
 
 #include <mainwindow.h>
 #include <QObject>
+#include <question.h>
 
 class GameLoop : public QObject
 {
@@ -15,8 +16,9 @@ public:
 private:
     MainWindow* mainWindow;
     int round = 0;
-    int gameloop(int round,bool lost = false);
+    void gameloop(int round,bool lost = false);
     void gameEnd(bool lost);
+    void askQuestion(int round);
     virtual ~GameLoop();
 
 

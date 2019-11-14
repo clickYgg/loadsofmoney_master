@@ -1,9 +1,10 @@
 #include "gameloop.h"
 #include "QObject"
 #include "stdint.h"
+#include "iostream"
 
 GameLoop::GameLoop(MainWindow *mainWindow) : QObject() {
-
+    this->mainWindow = mainWindow;
 }
 
 
@@ -11,33 +12,12 @@ void GameLoop::init() {
 
 }
 
-int askQuestion(int round) {
-
-    //questionClass qObj;
-    //int choice;
-
-//    cout << "ROUND: " << round << endl;
-//    cout << "QUESTION: " << qObj.q << endl;
-//    cout << "ANSWER 1. "+qObj.a1 << endl;
-//    cout << "ANSWER 2. "+qObj.a2 << endl;
-//    cout << "ANSWER 3. "+qObj.a3 << endl;
-//    cout << "ANSWER 4. "+qObj.a4 << endl;
-
-//    cin >> choice;
-
-//    if (choice == qObj.solution) {
-//        round++;
-//        cout << "you are goddamnn right!" << endl;
-//        return round;
-//    }
-//    else {
-//        // game over
-//        round = -1;
-//        return round;
-//    }
+void GameLoop::askQuestion(int round) {
+    Question q = Question("Wie alt bin ich?","22","21","40","20",4,round);
+    mainWindow->getQuestionView()->setQuestion(&q);
 }
 
-int GameLoop::gameloop(int round,bool lost) {
+void GameLoop::gameloop(int round,bool lost) {
 
     if (lost) {
       gameEnd(lost);
@@ -52,6 +32,7 @@ int GameLoop::gameloop(int round,bool lost) {
 
 void GameLoop::gameEnd(bool lost) {
     round = 0;
+    mainWindow->getEndMsg()->setVisible(true);
     mainWindow->getQuestionView()->setVisible(false);
     mainWindow->getStartButton()->setVisible(true);
     if (lost) {
@@ -59,23 +40,19 @@ void GameLoop::gameEnd(bool lost) {
     } else {
          mainWindow->getEndMsg()->setText("okay");
     }
-
 }
 
 void GameLoop::success(bool status) {
-    gameloop(round,status);
+    round++;
+
+    gameloop(round,!status);
 }
 
 
-
 void GameLoop::startButtonPress() {
-    std::cout << "Hallo1" << std::endl;
     mainWindow->getStartButton()->setVisible(false);
-    std::cout << "Hallo2" << std::endl;
     mainWindow->getQuestionView()->setVisible(true);
-    std::cout << "Hallo3" << std::endl;
     mainWindow->getEndMsg()->setVisible(false);
-    std::cout << "Hallo4" << std::endl;
     gameloop(0,false);
 }
 
