@@ -27,22 +27,19 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
         questionview.cpp \
-    question.cpp
+    question.cpp \
+    gameloop.cpp
 
 
 HEADERS += \
         mainwindow.h \
         questionview.h \
-        question.h
+        question.h \
+        gameloop.h
 
 FORMS += \
         mainwindow.ui \
         questionview.ui
-
-HEADERS += \
-        mainwindow.h \
-        questionview.h \
-    question.h
 
 FORMS += \
         mainwindow.ui \
