@@ -146,9 +146,10 @@ QuestionView {
 }
 
 QWidget#centralWidget {
-    background-image: url(:/images/icon.png) no-repeat center center stretch;
+    background-image: url(:/images/icon.png) no-repeat center center fixed;
 	background-repeat: no-repeat;
 	background-position: center;
+	background-size: cover;
 	background-color: rgb(0, 0, 50);
 }
 
@@ -164,6 +165,9 @@ QWidget {
   </property>
   <property name="toolButtonStyle">
    <enum>Qt::ToolButtonTextOnly</enum>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
   </property>
   <property name="documentMode">
    <bool>false</bool>
@@ -216,16 +220,6 @@ QWidget {
      </spacer>
     </item>
     <item>
-     <widget class="QLabel" name="endMsg">
-      <property name="text">
-       <string>TextLabel</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item>
      <spacer name="verticalSpacer_3">
       <property name="orientation">
        <enum>Qt::Vertical</enum>
@@ -240,6 +234,16 @@ QWidget {
        </size>
       </property>
      </spacer>
+    </item>
+    <item>
+     <widget class="QLabel" name="endMsg">
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
     </item>
     <item>
      <widget class="QPushButton" name="startButton">

@@ -18,7 +18,6 @@ void GameLoop::askQuestion(int round) {
 }
 
 void GameLoop::gameloop(int round,bool lost) {
-
     if (lost) {
       gameEnd(lost);
     }else if (round > 14) {
