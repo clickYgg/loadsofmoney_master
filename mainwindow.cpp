@@ -12,8 +12,12 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    QFont font(":/font/open-sans.ttf");
+    font.setPointSize(14);
     ui->questionView->setVisible(false);
     ui->endMsg->setVisible(false);
+    ui->endMsg->setFont(font);
+    ui->startButton->setFont(font);
 }
 
 QuestionView* MainWindow::getQuestionView() {

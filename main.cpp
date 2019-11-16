@@ -5,7 +5,8 @@
 #include <question.h>
 #include <questionview.h>
 #include <gameloop.h>
-
+#include <QFile>
+#include <QFontDatabase>
 using namespace std;
 
 
@@ -14,7 +15,6 @@ int main(int argc, char *argv[])
     QApplication a(argc,argv);
     MainWindow mainWindow;
     mainWindow.show();
-
     GameLoop *g = new GameLoop(&mainWindow);
     QObject::connect(mainWindow.getStartButton(), SIGNAL (released()), g, SLOT (startButtonPress()));
 

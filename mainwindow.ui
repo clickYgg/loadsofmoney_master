@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1012</width>
+    <width>905</width>
     <height>702</height>
    </rect>
   </property>
@@ -110,6 +110,11 @@
     </disabled>
    </palette>
   </property>
+  <property name="font">
+   <font>
+    <family>Arial</family>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>Wer wird Millionär?</string>
   </property>
@@ -121,7 +126,11 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">QLabel {
+   <string notr="true">QPushButton { 
+	color : white; 
+}
+
+QLabel {
        anchors.centerIn: parent
        text: &quot;Top or left&quot;
        color: &quot;white&quot;
@@ -129,13 +138,6 @@
        anchors.margins: 20
 }
 
-QButton {
-       anchors.centerIn: parent
-       text: &quot;Top or left&quot;
-       color: &quot;white&quot;
-	   anchors.fill: parent
-       anchors.margins: 20
-}
 
 QuestionView {
        anchors.centerIn: parent
@@ -160,6 +162,17 @@ QMainWindow {
 
 QWidget {
 	position: center;
+}
+
+QPushButton:hover#startButton {
+	border-image: url(:/images/start_button_enabled.png);
+	border-width: 0px;
+}
+
+QPushButton#startButton {
+	border-image:url(:/images/start_button.png);
+	border-width: 0px;
+	padding: 10px 0px 10px 0px;
 }</string>
   </property>
   <property name="toolButtonStyle">
@@ -199,6 +212,18 @@ QWidget {
     <property name="sizeConstraint">
      <enum>QLayout::SetMaximumSize</enum>
     </property>
+    <property name="leftMargin">
+     <number>60</number>
+    </property>
+    <property name="topMargin">
+     <number>10</number>
+    </property>
+    <property name="rightMargin">
+     <number>60</number>
+    </property>
+    <property name="bottomMargin">
+     <number>10</number>
+    </property>
     <item>
      <spacer name="verticalSpacer">
       <property name="orientation">
@@ -236,13 +261,42 @@ QWidget {
       <property name="sizeHint" stdset="0">
        <size>
         <width>40</width>
-        <height>90</height>
+        <height>110</height>
        </size>
       </property>
      </spacer>
     </item>
     <item>
      <widget class="QPushButton" name="startButton">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="baseSize">
+       <size>
+        <width>300</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <stylestrategy>PreferAntialias</stylestrategy>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton:hover#startButton {
+	border-image: url(:/images/start_button_enabled.png)
+	border-width: 0px;
+}
+
+QPushButton#startButton {
+	border-image:url(:/images/start_button.png)
+	border-width: 0px;
+}</string>
+      </property>
       <property name="text">
        <string>START</string>
       </property>
@@ -259,7 +313,7 @@ QWidget {
       <property name="sizeHint" stdset="0">
        <size>
         <width>6</width>
-        <height>7</height>
+        <height>20</height>
        </size>
       </property>
      </spacer>
@@ -274,6 +328,12 @@ QWidget {
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <family>OpenSymbol</family>
+        <pointsize>14</pointsize>
+       </font>
       </property>
       <property name="contextMenuPolicy">
        <enum>Qt::NoContextMenu</enum>
@@ -293,7 +353,7 @@ QWidget {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1012</width>
+     <width>905</width>
      <height>21</height>
     </rect>
    </property>
