@@ -17,5 +17,12 @@
         <file>font/open-sans.ttf</file>
         <file>images/start_button.png</file>
         <file>images/start_button_enabled.png</file>
+        <file>images/moneytree.png</file>
+        <file>images/counter_gem.png</file>
+        <file>images/counter_select.png</file>
+        <file>images/game_background.png</file>
+        <file>images/main_background.png</file>
+        <file>images/money_label.png</file>
+        <file>images/quit.png</file>
     </qresource>
 </RCC>

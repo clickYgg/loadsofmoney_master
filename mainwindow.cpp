@@ -14,14 +14,28 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     QFont font(":/font/open-sans.ttf");
     font.setPointSize(14);
-    ui->questionView->setVisible(false);
-    ui->endMsg->setVisible(false);
+    ui->endMsg->setText("");
     ui->endMsg->setFont(font);
     ui->startButton->setFont(font);
+    ui->moneycounter->setFont(font);
+    ui->stackedWidget->setCurrentIndex(0);
+
+}
+
+QPushButton* MainWindow::getQuitButton() {
+    return ui->quitButton;
+}
+
+MoneyCounter* MainWindow::getMonyCounter() {
+    return ui->moneycounter;
 }
 
 QuestionView* MainWindow::getQuestionView() {
     return ui->questionView;
+}
+
+void MainWindow::setView(int i) {
+    ui->stackedWidget->setCurrentIndex(i);
 }
 
 QPushButton* MainWindow::getStartButton() {

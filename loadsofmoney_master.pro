@@ -28,22 +28,22 @@ SOURCES += \
         mainwindow.cpp \
         questionview.cpp \
     question.cpp \
-    gameloop.cpp
+    gameloop.cpp \
+    moneycounter.cpp
 
 
 HEADERS += \
         mainwindow.h \
         questionview.h \
         question.h \
-        gameloop.h
+        gameloop.h \
+    moneycounter.h
 
 FORMS += \
         mainwindow.ui \
-        questionview.ui
+        questionview.ui \
+    moneycounter.ui
 
-FORMS += \
-        mainwindow.ui \
-    questionview.ui
 
 
 RESOURCES += \

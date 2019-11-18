@@ -6,6 +6,7 @@
 #include <questionview.h>
 #include <qpushbutton.h>
 #include <qlabel.h>
+#include <moneycounter.h>
 
 namespace Ui {
     class MainWindow;
@@ -20,7 +21,11 @@ public:
     QuestionView* getQuestionView();
     QPushButton* getStartButton();
     QLabel* getEndMsg();
+    MoneyCounter* getMonyCounter(); 
+    QPushButton* getQuitButton();
+    void setView(int i);
     ~MainWindow();
+
 
 
 private:

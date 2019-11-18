@@ -13,11 +13,11 @@
     <x>0</x>
     <y>0</y>
     <width>1702</width>
-    <height>234</height>
+    <height>294</height>
    </rect>
   </property>
   <property name="sizePolicy">
-   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
@@ -202,12 +202,12 @@ QPushButton#d_button {
         <enum>Qt::Vertical</enum>
        </property>
        <property name="sizeType">
-        <enum>QSizePolicy::Maximum</enum>
+        <enum>QSizePolicy::Fixed</enum>
        </property>
        <property name="sizeHint" stdset="0">
         <size>
          <width>0</width>
-         <height>15</height>
+         <height>20</height>
         </size>
        </property>
       </spacer>
@@ -229,8 +229,11 @@ QPushButton#d_button {
        <property name="bottomMargin">
         <number>0</number>
        </property>
-       <property name="spacing">
+       <property name="horizontalSpacing">
         <number>0</number>
+       </property>
+       <property name="verticalSpacing">
+        <number>10</number>
        </property>
        <item row="0" column="0">
         <spacer name="horizontalSpacer">

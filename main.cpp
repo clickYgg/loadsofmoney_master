@@ -10,13 +10,20 @@
 using namespace std;
 
 
+#include <QStyle>
+#include <QDesktopWidget>
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc,argv);
     MainWindow mainWindow;
-    mainWindow.show();
+    QFontDatabase::addApplicationFont(":/font/open-sans.ttf");
+    mainWindow.showFullScreen();
+
     GameLoop *g = new GameLoop(&mainWindow);
     QObject::connect(mainWindow.getStartButton(), SIGNAL (released()), g, SLOT (startButtonPress()));
+    QObject::connect(mainWindow.getQuitButton(), SIGNAL(released()), &a, SLOT(quit()));
+
 
     QObject::connect(mainWindow.getQuestionView(), &QuestionView::success, g, &GameLoop::success);
 
