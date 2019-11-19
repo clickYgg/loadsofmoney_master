@@ -15,6 +15,7 @@ public:
 
 private:
     MainWindow* mainWindow;
+    QList<Question> questions;
     int round = 0;
     void gameloop(int round,bool lost = false);
     void gameEnd(bool lost);

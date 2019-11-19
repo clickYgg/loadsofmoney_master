@@ -7,10 +7,10 @@
 using namespace std;
 
 Question::Question(QString question,QString answer1,QString answer2, QString answer3,QString answer4,int solution, int difficulty) {
-    answers->push_back(answer1);
-    answers->push_back(answer2);
-    answers->push_back(answer3);
-    answers->push_back(answer4);
+    answers.push_back(answer1);
+    answers.push_back(answer2);
+    answers.push_back(answer3);
+    answers.push_back(answer4);
     QFont font(":/font/open-sans.ttf");
     this->question = question;
     this->difficulty = difficulty;
@@ -18,7 +18,7 @@ Question::Question(QString question,QString answer1,QString answer2, QString ans
 }
 
 QString Question::getAnswer(int i) {
-   return answers->at(i);
+   return answers.at(i);
 }
 
 QString Question::getQuestion() {
@@ -30,5 +30,5 @@ int Question::getSolution() {
 }
 
 Question::~Question() {
-    answers->clear();
+    answers.clear();
 }

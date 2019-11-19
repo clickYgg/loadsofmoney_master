@@ -17,7 +17,7 @@ public:
     ~Question();
 private:
     QString question = "What is my name?";
-    QStringList *answers = new QStringList();
+    QStringList answers;
     int solution = 3;
     int difficulty = 0;
 };

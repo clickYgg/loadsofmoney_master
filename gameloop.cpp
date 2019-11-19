@@ -3,9 +3,14 @@
 #include "stdint.h"
 #include "iostream"
 #include <QTimer>
+#include <QList>
+
+
 
 GameLoop::GameLoop(MainWindow *mainWindow) : QObject() {
     this->mainWindow = mainWindow;
+    questions.append(Question("Wie alt bin ich?","22","21","40","20",4,round));
+    questions.append(Question("Test","etst","test","ste","tset",4,round));
 }
 
 
@@ -15,7 +20,7 @@ void GameLoop::init() {
 
 void GameLoop::askQuestion(int round) {
     mainWindow->getMonyCounter()->setIndex(round);
-    Question q = Question("Wie alt bin ich?","22","21","40","20",4,round);
+    Question q = questions.at(round);
     mainWindow->getQuestionView()->setQuestion(&q);
 }
 
@@ -25,7 +30,6 @@ void GameLoop::gameloop(int round,bool lost) {
     }else if (round > 14) {
       mainWindow->getMonyCounter()->setIndex(round);
       QTimer::singleShot(800,this,[this,lost]{ gameEnd(lost);});
-
     } else {
        askQuestion(round);
     }
